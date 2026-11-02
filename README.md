@@ -13,7 +13,7 @@ laundry gathering information and printing information using the terminal. It wi
 and then it will store that input as the date laundry was done. Then it will calculate how many days since laundry and the predicted date 
 of when you should do laundry.
 
-![System diagram](images/ToolsLaundryDiagram.drawio.png)
+![System diagram](ToolsLaundryDiagram.drawio.png)
 
 ## Tech Stack
 
