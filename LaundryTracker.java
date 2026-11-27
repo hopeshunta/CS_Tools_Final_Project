@@ -44,14 +44,12 @@ public class LaundryTracker {
         });
     }
 
-    
-
     //Runs once the user answered the question and shows the statistics frame 
     //Having a seperate screen for the statitists allows the user to feel less overwhelmed and allows for everything to be calculated and then shown.
     private static void showStatisticsFrame() {
     
       
-     
+      //Each field of information has a set size and the answer is in a different color to help draw the user's attention to it.
        JLabel lastLaundryDayLabel = new JLabel("Last day you did laundry: "); 
        lastLaundryDayLabel.setFont(lastLaundryDayLabel.getFont().deriveFont(24f));
        JLabel lastLaundryDayAnswer = new JLabel(getLastLaundryDate().toString());
@@ -152,6 +150,4 @@ public class LaundryTracker {
         return "Can not calculate, please do laundry first.";
       }
     } 
-
-
 }
