@@ -20,11 +20,11 @@ of when you should do laundry.
 
 - **Language:** Java
 - **Libraries:**: This project imports:
-                    javax.swing in order to set up a nice looking GUI for the user to interact with,
-                    java.time to assist with analyzing the current day and when the user needs to do laundry next,
-                    java.time.temporal.ChronoUnit in order to easily compare dates and get how many days are in between them,
-                    java.awt.Color is used to color the answers blue,
-                    java.io is used to read and write to the laundry file so that this program can still keep track of the data even when the user closes the app.
+  - javax.swing in order to set up a nice looking GUI for the user to interact with,
+  - java.time to assist with analyzing the current day and when the user needs to do laundry next,
+  - java.time.temporal.ChronoUnit in order to easily compare dates and get how many days are in between them,
+  - java.awt.Color is used to color the answers blue,
+  - java.io is used to read and write to the laundry file so that this program can still keep track of the data even when the user closes the app.
 ## Setup
 
 Step-by-step: how does someone who just cloned your repo get it
