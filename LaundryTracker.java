@@ -63,6 +63,7 @@ public class LaundryTracker {
     public static LocalDate getLastLaundryDate() {
 
       try (BufferedReader br = new BufferedReader(new FileReader("Laundry.txt"))) {
+        try {
           LocalDate line = LocalDate.parse(br.readLine()); 
           if (line != null) {
            LocalDate lastLaundryDate = line; 
@@ -70,6 +71,9 @@ public class LaundryTracker {
           } else {
             return null;
           }
+        }  catch (NullPointerException e) {
+          return null;
+        }
       }  catch (IOException e) { 
           return null;
       }
@@ -88,7 +92,6 @@ public class LaundryTracker {
     public static String daysSince() { 
       if(getLastLaundryDate() != null) {
         return String.valueOf(getLastLaundryDate().until(LocalDate.now(), ChronoUnit.DAYS)); 
-
       } else {
         return "Can not calculate, please do laundry first";
       }
