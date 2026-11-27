@@ -3,6 +3,7 @@ import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.awt.Color;
 import java.io.*; 
+import java.awt.Component; 
 
 public class LaundryTracker {
     public static void main(String[] args) {
@@ -16,18 +17,48 @@ public class LaundryTracker {
 
             JLabel questionLabel = new JLabel("Did you do laundry today?"); 
             questionLabel.setFont(questionLabel.getFont().deriveFont(24f));
+            questionLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             JPanel questionPanel = new JPanel();
+            questionPanel.setLayout(new BoxLayout(questionPanel, BoxLayout.Y_AXIS));
 
             JButton yesButton = new JButton("Yes");
             JButton noButton = new JButton("No");
-            JPanel buttonPanel = new JPanel();
+            JPanel buttonPanel = new JPanel(); 
 
+            JPanel setDayPanel = new JPanel(); 
+            JPanel fieldsPanel = new JPanel();
+
+            JLabel setDayLabel = new JLabel("Forgot to set your last laundry day?"); 
+            setDayLabel.setFont(setDayLabel.getFont().deriveFont(24f));
+            JTextField setYear = new JTextField(4);
+            JLabel yearLabel = new  JLabel("Year: ");
+            JTextField setMonth = new JTextField(2);
+            JLabel monthLabel = new  JLabel("Month: ");
+            JTextField setDay = new JTextField(2);
+            JLabel dayLabel = new  JLabel("Day: "); 
+
+            JButton setButton = new JButton("Set");
+            JPanel setPanel = new JPanel();
+
+            setPanel.add(setButton);
+
+            setDayPanel.add(setDayLabel); 
+            fieldsPanel.add(yearLabel);
+            fieldsPanel.add(setYear);
+            fieldsPanel.add(monthLabel);
+            fieldsPanel.add(setMonth);
+            fieldsPanel.add(dayLabel);
+            fieldsPanel.add(setDay);
+            
             questionPanel.add(questionLabel);
             buttonPanel.add(yesButton);
             buttonPanel.add(noButton); 
+
             questionPanel.add(buttonPanel); 
-            questionPanel.setLayout(new BoxLayout(questionPanel, BoxLayout.Y_AXIS));
-            questionFrame.add(questionPanel);
+            questionPanel.add(setDayPanel); 
+            questionPanel.add(fieldsPanel); 
+            questionPanel.add(setPanel);       
+            questionFrame.add(questionPanel);  
             questionFrame.setVisible(true);  
 
             //Listens for an answer to if the user did laundry today
@@ -44,6 +75,7 @@ public class LaundryTracker {
         });
     }
 
+    
     //Runs once the user answered the question and shows the statistics frame 
     //Having a seperate screen for the statitists allows the user to feel less overwhelmed and allows for everything to be calculated and then shown.
     private static void showStatisticsFrame() {
