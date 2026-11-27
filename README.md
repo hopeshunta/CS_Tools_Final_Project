@@ -28,7 +28,7 @@ Step-by-step: how does someone who just cloned your repo get it
 running?
 
 ```bash
-git clone https://github.com/your-username/laundry-tracker
+git clone https://github.com/hopeshunta/CS_Tools_Final_Project.git
 cd laundry-tracker
 #Compile the tracker
 javac LaundryTracker.java
