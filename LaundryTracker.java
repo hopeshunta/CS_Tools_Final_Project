@@ -52,8 +52,14 @@ public class LaundryTracker {
       //Each field of information has a set size and the answer is in a different color to help draw the user's attention to it.
        JLabel lastLaundryDayLabel = new JLabel("Last day you did laundry: "); 
        lastLaundryDayLabel.setFont(lastLaundryDayLabel.getFont().deriveFont(24f));
-       JLabel lastLaundryDayAnswer = new JLabel(getLastLaundryDate().toString());
-       lastLaundryDayAnswer.setFont(lastLaundryDayAnswer.getFont().deriveFont(24f));
+        JLabel lastLaundryDayAnswer = new JLabel();
+       if(getLastLaundryDate() != null) {
+          lastLaundryDayAnswer.setText(getLastLaundryDate().toString());
+       } else {
+         lastLaundryDayAnswer.setText("Can not calculate, please do laundry first.");
+       }
+        lastLaundryDayAnswer.setFont(lastLaundryDayAnswer.getFont().deriveFont(24f));
+
        lastLaundryDayAnswer.setForeground(Color.BLUE);
 
        JPanel lastDayPanel = new JPanel(); 
@@ -136,7 +142,7 @@ public class LaundryTracker {
       if(getLastLaundryDate() != null) {
         return String.valueOf(getLastLaundryDate().until(LocalDate.now(), ChronoUnit.DAYS)); 
       } else {
-        return "Can not calculate, please do laundry first";
+        return "Can not calculate, please do laundry first.";
       }
     }
 
