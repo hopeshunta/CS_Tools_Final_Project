@@ -29,7 +29,7 @@ running?
 
 ```bash
 git clone https://github.com/hopeshunta/CS_Tools_Final_Project.git
-cd laundry-tracker
+cd CS_Tools_Final_Project.git
 #Compile the tracker
 javac LaundryTracker.java
 #Run the tracker
