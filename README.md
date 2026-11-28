@@ -43,12 +43,15 @@ of when you should do laundry.
 ## Tech Stack
 
 - **Language:** Java
-- **Libraries:**: This project imports:
+- **Libraries:** This project imports:
   - javax.swing in order to set up a nice looking GUI for the user to interact with,
   - java.time to assist with analyzing the current day and when the user needs to do laundry next,
   - java.time.temporal.ChronoUnit in order to easily compare dates and get how many days are in between them,
   - java.awt.Color is used to color the answers blue,
   - java.io is used to read and write to the laundry file so that this program can still keep track of the data even when the user closes the app.
+- **Data Storage:** I will use a txt file called laundry.txt so that I can store the date that laundry was done.  
+- **Data Source:** Data will be collected from input form the user and data about the current day will be found using the java time import. 
+
 ## Setup
 
 Step-by-step: how does someone who just cloned your repo get it
@@ -66,4 +69,39 @@ java LaundryTracker
 ## Usage
 Once you have run the program decide whether you have done laundry today or not. 
 Based on your response the screen will change and display the last day you did laundry, 
-how many days it has been since then, and the predicted day you should do laundry next.
+how many days it has been since then, and the predicted day you should do laundry next. 
+
+## Sample Input:
+## Example 1:
+- Select Yes 
+- Read the statistics provided
+## Example 2:
+- Select No
+- See when you need to do laundry next and when the last time you did it was
+## Example 3:
+- Pretend you forgot to enter your last laundry day
+- Enter the year, month, and day of your last laundry day
+- example: enter 2026, 10, 10
+- See when you need to do laundry next and how many days it has been since the entered date
+
+## Roadmap
+- [x] Collect and store the User’s Laundry date 
+
+- [x] Collect the current day
+
+- [x] Calculate and days since laundry 
+ 
+- [x] Print days since laundry to the terminal 
+ 
+- [x] Project the laundry date based on the last time laundry was done
+ 
+- [x] Print the projected laundry date to the terminal
+
+- [x] Allows user to set their last Laundry day
+- [ ] A reminder system for when to do your next load
+- [ ] separate counter for light loads and bedding loads
+
+## Demo:
+
+
+
