@@ -16,6 +16,30 @@ of when you should do laundry.
 
 ![System diagram](ToolsLaundryDiagram.drawio.png)
 
+## Eisenhower Matrix:
+
+## Important
+## Do - (Your MVP)
+- Tracker of days since laundry
+- Asks user if they did laundry today
+- Prints days since last laundry  
+- Projected laundry date
+## Schedule - (For V2.0+)
+- Add separate counter for sheets/bedding
+- Allow user to retroactively put in when they did laundry -COMPLETED
+- Reminder system   
+
+## Not Important
+## Delegate - (Use a library)
+- Java’s LocalDate class to analyze calendar dates
+- Java’s ChronoUnit to track days in between the laundry day and current day.
+- IO.readln  and  IO.println to read user’s input from the terminal and print to the terminal
+- Use file I/O java classes to save and retrieve information
+## Delete - (Cut it)
+- Average of how many loads I’ve done that month
+- Add multiple users
+- Settings suggester 
+
 ## Tech Stack
 
 - **Language:** Java
@@ -43,5 +67,3 @@ java LaundryTracker
 Once you have run the program decide whether you have done laundry today or not. 
 Based on your response the screen will change and display the last day you did laundry, 
 how many days it has been since then, and the predicted day you should do laundry next.
-
-```
